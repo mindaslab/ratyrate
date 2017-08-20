@@ -1,3 +1,3 @@
 module Ratyrate
-  VERSION = "1.2.2.alpha"
+  VERSION = "0.0.0"
 end

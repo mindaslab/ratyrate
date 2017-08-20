@@ -10,6 +10,7 @@ function initstars(){
     var $halfShow = ($(this).attr('data-half-show') == 'true');
     var $single   = ($(this).attr('data-single') == 'true');
     var $cancel   = ($(this).attr('data-cancel') == 'true');
+    $(this).html(""); // fix for turbolinks
     $(this).raty({
       score: function() {
         return $(this).attr('data-rating')
@@ -40,6 +41,7 @@ function initstars(){
       readOnly: $readonly,
       click: function(score, evt) {
         var _this = this;
+        $(_this).attr('data-rating', score); // fix for turbolinks
         if (score == null) { score = 0; }
         $(this).trigger('rated', score)
         $.post('<%= Rails.application.class.routes.url_helpers.rate_path %>',
@@ -64,4 +66,4 @@ function initstars(){
 };
 
 $(document).ready(initstars);
-$(document).on('page:change',initstars);
+$(document).on('turbolinks:load',initstars);

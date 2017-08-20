@@ -3,15 +3,15 @@ $:.push File.expand_path("../lib", __FILE__)
 require "ratyrate/version"
 
 Gem::Specification.new do |s|
-  s.name        = "ratyrate"
+  s.name        = "ratyrate5"
   s.version     = Ratyrate::VERSION
-  s.authors     = ["Islam Wazery"]
-  s.email       = ["wazery@ubuntu.com"]
-  s.homepage    = "http://github.com/wazery/ratyrate"
+  s.authors     = ["Karthikeyan A K"]
+  s.email       = ["77minds@gmail.com"]
+  s.homepage    = "http://github.com/mindaslab/ratyrate5"
   s.summary     = %q{A Ruby Gem that wraps the functionality of jQuery Raty library, and adds IMDB style rating.}
   s.description = %q{A Ruby Gem that wraps the functionality of jQuery Raty library, and adds IMDB style rating.}
 
-  s.rubyforge_project = "ratyrate"
+  # s.rubyforge_project = "ratyrate"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
